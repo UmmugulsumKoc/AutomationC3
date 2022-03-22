@@ -15,8 +15,8 @@ public class LoginPage {
 
     @FindBy(id ="Email")
     public WebElement username;
-@FindBy (className = "button-submit")
-public WebElement submitButton;
+    @FindBy (className = "button-submit")
+    public WebElement submitButton;
     @FindBy(id ="PasswordHash")
     public WebElement password;
 

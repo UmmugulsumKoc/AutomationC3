@@ -5,21 +5,24 @@ import com.achilles.utilities.Driver;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 
+import java.util.concurrent.TimeUnit;
+
 public class Hooks {
 
    @Before
     public void setUp(){
-       System.out.println("");
+       Driver.get().manage().window().maximize();
+       Driver.get().manage().timeouts().implicitlyWait(12, TimeUnit.SECONDS);
    }
    @After
     public void tearDown() {
-       Driver.closeDriver();
+       //Driver.closeDriver();
    }
-    @Before("@db")
+    @Before()
     public void setUpdb(){
 
        }
-    @After("@db")
+    @After()
     public void closeDb(){
         System.out.println();
    }

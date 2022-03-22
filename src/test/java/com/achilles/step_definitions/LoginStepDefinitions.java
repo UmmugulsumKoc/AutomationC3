@@ -16,12 +16,7 @@ public class LoginStepDefinitions {
     @Given("usuario esta en la pagina")
     public void usuario_esta_en_la_pagina()
     {
-        //System.out.println("estoy en el entorno staging");
-        //String url = ConfigurationReader.get("url");
-        //WebDriver driver = Driver.get();
-        //Driver.get().get(url);
 
-        //Driver.get().manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         String url= ConfigurationReader.get("url");
         Driver.get().get(url);
 

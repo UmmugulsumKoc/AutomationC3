@@ -11,8 +11,11 @@ public class Filtrar {
         PageFactory.initElements(Driver.get(), this);
     }
 
-    @FindBy(xpath = "//*[@id=\"menu\"]/ul/li[11]/label" )
+    @FindBy(xpath = "//label[@for=\"validation\"]" )
     public WebElement validar;
+
+    @FindBy(partialLinkText = ("Search/Documents/ValidateDocuments"))
+    public WebElement ValidarDocumentos;
 
 
 public void Validacíonfiltrar(){

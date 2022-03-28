@@ -7,7 +7,10 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.Map;
 
 
@@ -15,6 +18,19 @@ public class AñadirStepDefinitions {
     Añadir añadir = new Añadir();
 
 
+    //@Given("seleciona el buyer Cepsa")
+    //public void seleciona_el_buyer_Cepsa() throws InterruptedException {
+
+
+
+        //añadir.buyer.isSelected();
+        //añadir.cepsa.click();
+        //Thread.sleep(2000);
+
+
+
+
+    //}
     @Given("entro en la Contratos en la izquierda")
     public void ento_en_la_Contratos_en_la_izquierda() throws InterruptedException {
 
@@ -41,7 +57,7 @@ public class AñadirStepDefinitions {
 
     @And("relleno el numero de contrato {string}")
     public void relleno_el_numero_de_contrato(String string) throws InterruptedException {
-        añadir.numerocontrato.sendKeys("000020222203");
+        añadir.numerocontrato.sendKeys("000020222503");
         Thread.sleep(2000);
     }
 
@@ -150,4 +166,58 @@ public class AñadirStepDefinitions {
 
 
     }
-}
+
+
+
+
+
+
+
+    @When("escribo del numero {string} de contrado y hago clic")
+    public void escribo_del_numero_de_contrado_y_hago_clic(String string) {
+        añadir.numerocontrato.sendKeys("000020222403");
+        añadir.numero.click();
+
+    }
+
+    @When("selecciona un Subcontratista Nivel de contratación {int}")
+    public void selecciona_un_Subcontratista_Nivel_de_contratación(Integer int1) throws InterruptedException {
+        añadir.subcontratista.click();
+        añadir.suaz.click();
+        Thread.sleep(7000);
+
+
+    }
+
+    @When("hago clic en el boton subir documento y subir uno")
+    public void hago_clic_en_el_boton_subir_documento_y_subir_uno() throws InterruptedException {
+        añadir.subirDocumento.click();
+        File file = new File("C:\\Users\\Ummu.Gulsum\\OneDrive - Achilles Information Ltd\\Documentos\\Prueba.pdf");
+         File AutoExe = new File("C:\\Users\\Ummu.Gulsum\\OneDrive - Achilles Information Ltd\\Escritorio\\Fileupload.exe");
+        Thread.sleep(10000);
+        try {
+             Runtime.getRuntime().exec(AutoExe + " " + file);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+    }
+
+    @When("hago clic a boton de nueva persona de contacto y ir al boton seleccione persona de contacto")
+    public void hago_clic_a_boton_de_nueva_persona_de_contacto_y_ir_al_boton_seleccione_persona_de_contacto() {
+        añadir.contactPersonId2.click();
+        añadir.selectNuevaPerson.click();
+    }
+
+    @When("ir al boton a Guardar")
+    public void ir_al_boton_a_Guardar() {
+
+    }
+
+    @Then("el subcontrado esta guardado correctamente y esta en el estado Pendiente")
+    public void el_subcontrado_esta_guardado_correctamente_y_esta_en_el_estado_Pendiente() {
+
+
+    }
+    }

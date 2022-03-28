@@ -12,6 +12,17 @@ public class Añadir {
     }
 
 
+    //@FindBy(xpath = "(//div[@class=\"notification-box\"])[2]")
+    //public WebElement buyer;
+
+    //@FindBy(xpath = "(//div[@class='notification-box'])[2]")
+    //public WebElement buyer;
+
+    //@FindBy(id = "OP-8")
+    //public WebElement cepsa;
+
+
+
     @FindBy(xpath = "//label[@for=\"contracts\"]")
     public WebElement contratos;
 
@@ -85,6 +96,26 @@ public class Añadir {
 
     @FindBy(xpath = "//input[@value=\"Validar\"]")
     public WebElement validar;
+
+
+
+
+
+    @FindBy(xpath = "//span[@class='btn btn-block form-control']")
+    public WebElement numero;
+
+
+    @FindBy(id = "SupplierTextId")
+    public WebElement subcontratista;
+
+    @FindBy(xpath = "//a[@title=\"Subir documento\"]")
+    public WebElement subirDocumento;
+
+    @FindBy(id = "contactPersonId")
+    public WebElement contactPersonId2;
+
+    @FindBy(xpath = "//input[@value=\"Seleccione Persona de contacto\"]")
+    public WebElement selectNuevaPerson;
 
 
 

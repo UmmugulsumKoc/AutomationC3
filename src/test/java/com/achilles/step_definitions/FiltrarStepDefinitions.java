@@ -5,6 +5,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.By;
 
 public class FiltrarStepDefinitions {
 Filtrar validation= new Filtrar();
@@ -17,6 +18,10 @@ Filtrar validation= new Filtrar();
 
     @When("elegi Validar documentos")
     public void elegi_Validar_documentos() {
+        validation.ValidarDocumentos.findElement(By.partialLinkText("Search/Documents/ValidateDocuments"));
+        //validation.ValidarDocumentos.click();
+
+
 
     }
 

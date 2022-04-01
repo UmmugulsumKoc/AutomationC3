@@ -9,16 +9,12 @@ Background:
 
 
 @Cambiarrol
-Scenario Outline: Menu de roles
-  When hago click en el boton de supplier
+
+Scenario: Menu de roles
+  Given hago click en el boton de supplier
   Then yo veo los opciones y elegi uno
 
-Examples:
-|rol|
-  |Achilles|
-  |Supplier|
-  |Operator|
-  |Finance |
+
 
 
   @Cambiarbuyer

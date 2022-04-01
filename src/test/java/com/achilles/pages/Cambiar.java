@@ -26,7 +26,7 @@ public class Cambiar {
     @FindBy(css =".hvr-shrink")
     public WebElement cambiar;
 
-    //@FindBy(xpath ="//li[@onclick="AjaxServicePost(1,'Service/SetCurrentUserType')"]")
+    @FindBy(linkText ="Supplier (sim.)")
     public  WebElement rols;
 
 

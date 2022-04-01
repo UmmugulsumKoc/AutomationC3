@@ -25,7 +25,7 @@ public class LoginStepDefinitions {
 
     @When("usuario entrar en el entorno staging")
     public void usuario_entrar_en_el_entorno_staging() {
-        System.out.println("escribo mi usuarname y contrasña");
+        System.out.println("escribo mi usuarname y contraseña");
         String username = ConfigurationReader.get("username");
         String password = ConfigurationReader.get("password");
 

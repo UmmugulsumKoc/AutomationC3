@@ -15,7 +15,7 @@ Feature: Login
     When entro en la Contratos en la izquierda
     And abre menu y elegi Gestión de contratos
     And hago clic en el boton Añadir
-    And relleno el numero de contrato "000020223003-A"
+    And relleno el numero de contrato "000020223003A"
     And relleno Descripción "test"
     And selecciona una contratista
     And hago clic en el perfil y selleciona una

@@ -191,18 +191,28 @@ public class AñadirStepDefinitions {
 
     @When("hago clic en el boton subir documento y subir uno")
     public void hago_clic_en_el_boton_subir_documento_y_subir_uno() throws InterruptedException {
-        añadir.subirDocumento.click();
-        File file = new File("C:\\Users\\Ummu.Gulsum\\OneDrive - Achilles Information Ltd\\Documentos\\Prueba.pdf");
-         File AutoExe = new File("C:\\Users\\Ummu.Gulsum\\OneDrive - Achilles Information Ltd\\Escritorio\\Fileupload.exe");
+
+        BrowserUtils.scrollToElement(añadir.subirDocumento);
+        //añadir.subirDocumento.click();
+       //
+        //clicking upload button
+
+
+        //Thread.sleep(10000);
+        //File file = new File("C:\\Users\\Ummu.Gulsum\\OneDrive - Achilles Information Ltd\\Documentos\\Prueba.pdf");
+
+
+        //añadir.subirDocumento.sendKeys(file);
+        //File AutoExe = new File("C:\\Users\\Ummu.Gulsum\\OneDrive - Achilles Information Ltd\\Escritorio\\Nueva carpeta\\FileUpload (1).exe");
         Thread.sleep(10000);
-        try {
-             Runtime.getRuntime().exec(AutoExe + " " + file);
-        } catch (IOException e) {
-            e.printStackTrace();
+        //try {
+         //    Runtime.getRuntime().exec(AutoExe + " " + file);
+        //} catch (IOException e) {
+         //   e.printStackTrace();
         }
 
 
-    }
+
 
     @When("hago clic a boton de nueva persona de contacto y ir al boton seleccione persona de contacto")
     public void hago_clic_a_boton_de_nueva_persona_de_contacto_y_ir_al_boton_seleccione_persona_de_contacto() {

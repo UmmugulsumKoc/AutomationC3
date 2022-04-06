@@ -6,61 +6,57 @@ Feature: Login
     When usuario entrar en el entorno staging
     Then usuario deberia ver la pagina
     Then entro en la pagina Controlar
+    Given accedo a cliente y cambiarlo
+    When entro en la Contratos en la izquierda
+    And abre menu y elegi Gestión de contratos
+    And hago clic en el boton Añadir
+    And relleno el numero de contrato para Acerinox "000020223003K"
+    And relleno por el Descripcion "test1"
+    And ir al contratista y selecciona una
 
 
   @Acerinox
 
   Scenario: Añadir Contrato en Acerinox
-    Given accedo a cliente  selleciona el Acerinox
-    When entro en la Contratos en la izquierda
-    And abre menu y elegi Gestión de contratos
-    And hago clic en el boton Añadir
-    And relleno el numero de contrato "000020223003A"
-    And relleno Descripción "test"
-    And selecciona una contratista
+    //Given accedo a cliente  selleciona el Acerinox
+    //When entro en la Contratos en la izquierda
+    //And abre menu y elegi Gestión de contratos
+    //And hago clic en el boton Añadir
+    //And relleno el numero de contrato para Acerinox "000020223003K"
+    //And relleno por el Descripcion "test1"
+    //And ir al contratista y selecciona una
     And hago clic en el perfil y selleciona una
     And hago clic en centros de trabajo y selleciona una
-    And hago clic a Añadir Responsable
-    And se abre la pantalla de responsable y hago clic a seleccione
-    And selecciona una responsable y hago clic en el boton
+    And entro a Añadir Responsable
+    And se abre la pantalla de responsable y ir al boton seleccione
+    And elegi una responsable y hago clic en el boton
     And hago clic a Nueva Personas de contacto
     And hago clic en seleccione y e abre pantalla con personas. Elegi uno
     And hago clic en el boton guardar
+    Then ir al validar
 
 
 
   @Berge
 
     Scenario: Añadir Contrato en Berge
-      Given accedo a cliente  selleciona el Acerinox
-      When entro en la Contratos en la izquierda
-      And abre menu y elegi Gestión de contratos
-      And hago clic en el boton Añadir
-      And relleno el numero de contrato "000020223003-B"
-      And relleno Descripción "test"
-      And selecciona una contratista
+
       And hago clic a negocio y selecciona una
       And hago clic en la zona y selecciona una
       And hago clic en la sociedad y seleciona una
       And hago clic sociedad-división y seleciona una
       And hago clic a riesgo y selecciona una
-      And hago clic a Añadir Responsable
-      And se abre la pantalla de responsable y hago clic a seleccione
-      And selecciona una responsable y hago clic en el boton
-      And hago clic a Nueva Personas de contacto
-      And hago clic en seleccione y e abre pantalla con personas. Elegi uno
+      And hago clic al boton Añadir Responsable
+      And en la pantalla de responsable hago clic a seleccione
+      And elegio una y hago clic en el boton
+      And hago clic al boton Nueva Personas de contacto
+      And hago clic en seleccione y se abre pantalla con personas, elegi uno
       And hago clic en el boton guardar
 
   @Cemex
 
     Scenario: Añadir Contrato en Cemex
-        Given accedo a cliente  selleciona el Cemex
-        When entro en la Contratos en la izquierda
-        And abre menu y elegi Gestión de contratos
-        And hago clic en el boton Añadir
-        And relleno el numero de contrato "000020223003-C"
-        And relleno Descripción "test"
-        And selecciona una contratista
+
         And hago clic a negocio y selecciona una
         And hago clic en la región y selecciona una
         And hago clic en la centro y seleciona una

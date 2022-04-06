@@ -60,16 +60,11 @@ public class Añadir {
     @FindBy(id = "structure3")
     public WebElement centro;
 
-    @FindBy()
-    public WebElement andorra;
-
-
     @FindBy(id = "responsibleId")
     public WebElement responsable;
 
     @FindBy(id = "selectedUserId")
     public WebElement selectid;
-
 
     @FindBy(xpath = "//input[@value=\"Seleccione Responsable\"]")
     public WebElement botonResponsable;
@@ -77,10 +72,6 @@ public class Añadir {
     @FindBy(id = "contactPersonId")
     public WebElement contactPersonId;
 
-    //@FindBy(xpath = "(//div/div[contains(@class,\"col-md-12\")])[2]")
-    //public WebElement inputCorreo;
-
-    //@FindBy(xpath = "//input[@value=\"Seleccione Persona de contacto\"]")
     @FindBy(id="selectedUserId")
     public WebElement person;
 

@@ -10,7 +10,7 @@ Feature: Login
 
   @Contrato
   Scenario: Añadir contrato
-    //Given seleciona el buyer Cepsa
+
     Given entro en la Contratos en la izquierda
     When abre menu y elegi Gestión de contratos
     And hago clic en el boton Añadir

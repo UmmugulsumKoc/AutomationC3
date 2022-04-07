@@ -6,6 +6,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
+import javax.xml.xpath.XPath;
+
 public class Clientecontrat {
 
 
@@ -151,17 +153,47 @@ public class Clientecontrat {
     //@FindBy(xpath = "//*[@id=\"structure1\"]/optgroup/option[2]")
     //public WebElement cemento;
 
+    //@FindBy(id = "structure1")
+    //public WebElement negocio;
+
+    @FindBy(xpath = "//*[@id=\"structure1\"]//option[6]")
+    public WebElement negocioptionC;
+
+
     @FindBy(id = "structure2")
     public WebElement region;
 
-    @FindBy(xpath = "//*[@id=\"structure2\"]/option")
+    @FindBy(xpath = "//*[@id=\"structure2\"]//option[3]")
     public WebElement levante;
 
     @FindBy(id = "structure3")
     public WebElement centro;
 
-    @FindBy(xpath = "//*[@id=\"structure3\"]//optgroup")
+    @FindBy(xpath = "//*[@id=\"structure3\"]//optgroup/option")
     public WebElement centroption;
+
+    @FindBy(id = "structure4")
+    public WebElement Actividad;
+
+    @FindBy(xpath = "//*[@id=\"structure4\"]//option[5]")
+    public WebElement Actividadoption;
+
+    @FindBy(id = "specialRiskId")
+    public WebElement riesgos;
+
+    @FindBy(xpath = "//*[@id=\"specialRiskId\"]//option[4]")
+    public WebElement riesgosption;
+
+
+    @FindBy(id = "OP-26")
+    public WebElement CIMSA;
+
+    @FindBy(id = "structure1")
+    public WebElement negociocimsa;
+
+    @FindBy(xpath = "//*[@id=\"structure1\"]//optgroup//option")
+    public WebElement negociacimssaoption;
+
 
 
 

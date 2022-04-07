@@ -8,11 +8,12 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class ClientecontratStepDefinition {
-      Clientecontrat client = new Clientecontrat();
+    Clientecontrat client = new Clientecontrat();
 
 
-    @Given("accedo a cliente y cambiarlo")
-    public void accedo_a_cliente_y_cambiarlo()throws InterruptedException {
+    @Given("accedo a cliente  selleciona el Acerinox")
+    public void accedo_a_cliente_selleciona_el_Acerinox() throws InterruptedException {
+
 
         client.Selectcliente.click();
         Thread.sleep(2000);
@@ -20,6 +21,7 @@ public class ClientecontratStepDefinition {
 
 
     }
+
     @When("relleno el numero de contrato para Acerinox {string}")
     public void relleno_el_numero_de_contrato_para_Acerinox(String string) throws InterruptedException {
 
@@ -35,13 +37,12 @@ public class ClientecontratStepDefinition {
         Thread.sleep(2000);
 
 
-
     }
+
     @And("ir al contratista y selecciona una")
     public void ir_al_contratista_y_selecciona_una() {
         client.contratistaA.click();
         client.acilles.click();
-
 
 
     }
@@ -61,7 +62,6 @@ public class ClientecontratStepDefinition {
         client.Centroopcion.click();
 
 
-
     }
 
     @And("entro a Añadir Responsable")
@@ -75,6 +75,7 @@ public class ClientecontratStepDefinition {
         client.selectidee.click();
 
     }
+
     @And("elegi una responsable y hago clic en el boton")
     public void elegi_una_responsable_y_hago_clic_en_el_boton() throws InterruptedException {
         Thread.sleep(2000);
@@ -83,14 +84,12 @@ public class ClientecontratStepDefinition {
 
 
     }
+
     @And("hago clic en seleccione y e abre pantalla con personas. Elegi uno")
     public void hago_clic_en_seleccione_y_e_abre_pantalla_con_personas_Elegi_uno() throws InterruptedException {
         client.personA.click();
         client.selecperson.click();
         client.selectPersonA.click();
-
-
-
 
 
     }
@@ -109,11 +108,11 @@ public class ClientecontratStepDefinition {
         Thread.sleep(2000);
 
 
+    }
 
 
-
-
-
+    @Then("accedo a cliente  selleciona el Berge")
+    public void accedo_a_cliente_selleciona_el_Berge() throws InterruptedException {
 
         client.SelectclienteB.click();
         Thread.sleep(2000);
@@ -121,6 +120,7 @@ public class ClientecontratStepDefinition {
 
 
     }
+
     @When("hago clic a negocio y selecciona una")
     public void hago_clic_a_negocio_y_selecciona_una() throws InterruptedException {
         client.negocio.click();
@@ -209,10 +209,6 @@ public class ClientecontratStepDefinition {
     }
 
 
-
-
-
-
     @Given("accedo a cliente  selleciona el Cemex")
     public void accedo_a_cliente_selleciona_el_Cemex() throws InterruptedException {
         client.SelectclienteB.click();
@@ -223,6 +219,8 @@ public class ClientecontratStepDefinition {
 
     @When("hago clic en la región y selecciona una")
     public void hago_clic_en_la_región_y_selecciona_una() throws InterruptedException {
+
+        client.negocioptionC.click();
         client.region.click();
         client.levante.click();
         Thread.sleep(2000);
@@ -230,24 +228,44 @@ public class ClientecontratStepDefinition {
     }
 
     @When("hago clic en la centro y seleciona una")
-    public void hago_clic_en_la_centro_y_seleciona_una() {
+    public void hago_clic_en_la_centro_y_seleciona_una() throws InterruptedException {
         client.centro.click();
         client.centroption.click();
+        Thread.sleep(2000);
 
     }
 
     @When("hago clic actividad y seleciona una")
-    public void hago_clic_actividad_y_seleciona_una() {
+    public void hago_clic_actividad_y_seleciona_una() throws InterruptedException {
+        client.Actividad.click();
+        client.Actividadoption.click();
+        Thread.sleep(2000);
 
     }
 
     @When("hago clic a riesgos especiales y selecciona una")
     public void hago_clic_a_riesgos_especiales_y_selecciona_una() {
+        client.riesgos.click();
+        client.riesgosption.click();
+        //client.selectResponsable().selectByVisibleText("Alba Valle (alba.valle@cemex.com)");
 
     }
+
+    @Then("accedo a cliente  selleciona el Cimsa")
+    public void accedo_a_cliente_selleciona_el_Cimsa() throws InterruptedException {
+
+        client.SelectclienteB.click();
+        Thread.sleep(2000);
+        client.CIMSA.click();
+
+        //client.negociocimsa.click();
+        //client.negociacimssaoption.click();
+
+    }
+
+
+
+
 }
-
-
-
 
 

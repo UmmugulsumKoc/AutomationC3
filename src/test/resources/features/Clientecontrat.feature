@@ -6,8 +6,8 @@ Feature: Login
     When usuario entrar en el entorno staging
     Then usuario deberia ver la pagina
     Then entro en la pagina Controlar
-    Given accedo a cliente y cambiarlo
-    When entro en la Contratos en la izquierda
+    And accedo a cliente  selleciona el Cimsa
+    And entro en la Contratos en la izquierda
     And abre menu y elegi Gestión de contratos
     And hago clic en el boton Añadir
     And relleno el numero de contrato para Acerinox "000020223003K"
@@ -15,16 +15,11 @@ Feature: Login
     And ir al contratista y selecciona una
 
 
+
   @Acerinox
 
   Scenario: Añadir Contrato en Acerinox
-    //Given accedo a cliente  selleciona el Acerinox
-    //When entro en la Contratos en la izquierda
-    //And abre menu y elegi Gestión de contratos
-    //And hago clic en el boton Añadir
-    //And relleno el numero de contrato para Acerinox "000020223003K"
-    //And relleno por el Descripcion "test1"
-    //And ir al contratista y selecciona una
+
     And hago clic en el perfil y selleciona una
     And hago clic en centros de trabajo y selleciona una
     And entro a Añadir Responsable
@@ -46,40 +41,36 @@ Feature: Login
       And hago clic en la sociedad y seleciona una
       And hago clic sociedad-división y seleciona una
       And hago clic a riesgo y selecciona una
-      And hago clic al boton Añadir Responsable
-      And en la pantalla de responsable hago clic a seleccione
-      And elegio una y hago clic en el boton
-      And hago clic al boton Nueva Personas de contacto
-      And hago clic en seleccione y se abre pantalla con personas, elegi uno
+      And hago clic a Añadir Responsable
+      And se abre la pantalla de responsable y hago clic a seleccione
+      And selecciona una responsable y hago clic en el boton
+      And hago clic a Nueva Personas de contacto
+      And hago clic en seleccione y e abre pantalla con personas. Elegi uno
       And hago clic en el boton guardar
+
 
   @Cemex
 
     Scenario: Añadir Contrato en Cemex
 
-        And hago clic a negocio y selecciona una
-        And hago clic en la región y selecciona una
-        And hago clic en la centro y seleciona una
-        And hago clic actividad y seleciona una
-        And hago clic a riesgos especiales y selecciona una
-        And hago clic a Añadir Responsable
-        And se abre la pantalla de responsable y hago clic a seleccione
-        And selecciona una responsable y hago clic en el boton
-        And hago clic a Nueva Personas de contacto
-        And hago clic en seleccione y e abre pantalla con personas. Elegi uno
-        And hago clic en el boton guardar
+    And hago clic a negocio y selecciona una
+    And hago clic en la región y selecciona una
+    And hago clic en la centro y seleciona una
+    And hago clic actividad y seleciona una
+    And hago clic a riesgos especiales y selecciona una
+    And hago clic a Añadir Responsable
+    And se abre la pantalla de responsable y hago clic a seleccione
+    And selecciona una responsable y hago clic en el boton
+    And hago clic a Nueva Personas de contacto
+    And hago clic en seleccione y e abre pantalla con personas. Elegi uno
+    And hago clic en el boton guardar
+
 
 
   @Cimsa
 
      Scenario: Añadir Contrato en Cimsa
-        Given accedo a cliente  selleciona el Cemex
-          When entro en la Contratos en la izquierda
-          And abre menu y elegi Gestión de contratos
-          And hago clic en el boton Añadir
-          And relleno el numero de contrato "000020223003-Ci"
-          And relleno Descripción "test"
-          And selecciona una contratista
+
           And hago clic a negocio y selecciona una
           And hago clic en la región y selecciona una
           And hago clic en la centro y seleciona una
@@ -96,13 +87,7 @@ Feature: Login
   @FreseniusMedicalCare
 
       Scenario: Añadir Contrato en FreseniusMedicalCare
-        Given accedo a cliente  selleciona el FreseniusMedical Care
-        When entro en la Contratos en la izquierda
-            And abre menu y elegi Gestión de contratos
-            And hago clic en el boton Añadir
-            And relleno el numero de contrato "000020223003-FMC"
-            And relleno Descripción "test"
-            And selecciona una contratista
+
             And hago clic en la sociedad y seleciona una
             And hago clic en centros de trabajo y selleciona una
             And hago clic actividad y seleciona una
@@ -115,13 +100,7 @@ Feature: Login
 
   @MetrodeMalaga
   Scenario: Añadir Contrato en MetrodeMalaga
-    Given accedo a cliente  selleciona el MetrodeMalaga
-    When entro en la Contratos en la izquierda
-    And abre menu y elegi Gestión de contratos
-    And hago clic en el boton Añadir
-    And relleno el numero de contrato "000020223003-MdM"
-    And relleno Descripción "test"
-    And selecciona una contratista
+
     And hago clic actividad y seleciona una
     And hago clic departamento y seleciona una
     And hago clic a Añadir Responsable
@@ -133,13 +112,7 @@ Feature: Login
 
   @Naturgy
   Scenario: Añadir Contrato en Naturgy
-    Given accedo a cliente  selleciona el Naturgy
-    When entro en la Contratos en la izquierda
-    And abre menu y elegi Gestión de contratos
-    And hago clic en el boton Añadir
-    And relleno el numero de contrato "000020223003-N"
-    And relleno Descripción "test"
-    And selecciona una contratista
+
     And hago clic negocio y seleciona una
     And hago clic área y seleciona una
     And hago clic departamento y seleciona una
@@ -155,12 +128,7 @@ Feature: Login
   @TMB
   Scenario: Añadir Contrato en TMB
     Given accedo a cliente  selleciona el TMB
-    When entro en la Contratos en la izquierda
-    And abre menu y elegi Gestión de contratos
-    And hago clic en el boton Añadir
-    And relleno el numero de contrato "000020223003-TMB"
-    And relleno Descripción "test"
-    And selecciona una contratista
+
     And hago clic riesgo y seleciona una
     And hago clic departamento y seleciona una
     And hago clic a Añadir Responsable
@@ -171,6 +139,35 @@ Feature: Login
     And hago clic en el boton guardar
 
 
+  Scenario Outline: Añadir nuevo contrato
+    Given entra a cliente "<Acerinox">
+    When hago clic a perfil "<basico>"
+    And hago clic en centros de trabajo "<gavaz>"
+    And hago clic a negocio "<logistica>"
+    And hago clic en la zona y selecciona una
+    And hago clic en la sociedad y seleciona una
+    And hago clic sociedad-división y seleciona una
+    And hago clic a riesgo y selecciona una
+    And hago clic en la región y selecciona una
+    And hago clic en la centro y seleciona una
+    And hago clic actividad y seleciona una
+    And hago clic a riesgos especiales y selecciona una
+    And hago clic a departamento y selecciona una
+    And hago clic a area
+
+
+
+
+    Examples:
+    |Cliente|Perfil|Centro Trabajo|Negocio|Zona|Sociedad|sociedad-división|riesgo|region|centro|actividad|riesgo especial|departamento|area|
+    |Acerinox|basico|gavaz        |
+    |Berge   |      |             |logistica|
+    |Cemex   |
+    |Cimsa   |
+    |FreseniusMedicalCare|
+    |MetrodeMalaga       |
+    |Naturgy             |
+    |TMB                 |
 
 
 

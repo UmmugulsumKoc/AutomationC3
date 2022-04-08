@@ -161,7 +161,7 @@ Feature: Login
     Examples:
     |Cliente|Perfil|Centro Trabajo|Negocio|Zona|Sociedad|sociedad-división|riesgo|region|centro|actividad|riesgo especial|departamento|area|
     |Acerinox|basico|gavaz        |
-    |Berge   |      |             |logistica|
+    |Berge   |      |             |Shipping|
     |Cemex   |
     |Cimsa   |
     |FreseniusMedicalCare|

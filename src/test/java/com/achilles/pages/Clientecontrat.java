@@ -18,8 +18,7 @@ public class Clientecontrat {
     @FindBy(xpath = "//img[@class=\"selected-image\"]")
     public WebElement Selectcliente;
 
-    @FindBy(id = "OP-21")
-    public WebElement Acerinox;
+
 
     @FindBy(id = "ContractBasisTextId")
     public WebElement Acerinoxcontrato;
@@ -36,17 +35,9 @@ public class Clientecontrat {
     @FindBy(xpath = "//*[@id=\"SupplierTextId\"]/option[7]")
     public WebElement acilles;
 
-    @FindBy(id = "structure1")
-    public WebElement perfil;
 
-    @FindBy(xpath = "//*[@id=\"structure1\"]//option[3]")
-    public WebElement option;
 
-    @FindBy(id = "structure2")
-    public WebElement CentroTrabajo;
 
-    @FindBy(xpath = "//option[@value=\"9\"]")
-    public WebElement Centroopcion;
 
     @FindBy(id = "responsibleId")
     public WebElement responsablem;
@@ -193,6 +184,52 @@ public class Clientecontrat {
 
     @FindBy(xpath = "//*[@id=\"structure1\"]//optgroup//option")
     public WebElement negociacimssaoption;
+
+
+
+
+    @FindBy(id = "OP-21")
+    public WebElement Acerinox;
+
+    @FindBy(id = "structure1")
+    public WebElement perfil;
+
+    @FindBy(xpath = "//*[@id=\"structure1\"]//option[3]")
+    public WebElement option;
+
+    @FindBy(id = "structure2")
+    public WebElement CentroTrabajo;
+
+    @FindBy(xpath = "//option[@value=\"9\"]")
+    public WebElement Centroopcion;
+
+
+    @FindBy(id ="OP-20")
+    public WebElement FreseniusMC;
+
+    @FindBy(id ="OP-6")
+    public WebElement MetroMalaga;
+
+    @FindBy(id ="OP-11")
+    public WebElement Naturgy;
+
+    @FindBy(id ="OP-13")
+    public WebElement Brazil;
+
+    @FindBy(id ="OP-24")
+    public WebElement Chile;
+
+    @FindBy(id ="OP-15")
+    public WebElement Mexico;
+
+    @FindBy(id ="OP-16")
+    public WebElement Panama;
+
+    @FindBy(id ="OP-17")
+    public WebElement Dominica;
+
+    @FindBy(id ="OP-5")
+    public WebElement TMB;
 
 
 

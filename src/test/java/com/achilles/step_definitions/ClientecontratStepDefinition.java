@@ -11,8 +11,8 @@ public class ClientecontratStepDefinition {
     Clientecontrat client = new Clientecontrat();
 
 
-    @Given("accedo a cliente  selleciona el Acerinox")
-    public void accedo_a_cliente_selleciona_el_Acerinox() throws InterruptedException {
+    @Given("accedo a cliente  selleciona {string}")
+    public void accedo_a_cliente_selleciona(String string) throws InterruptedException {
 
 
         client.Selectcliente.click();
@@ -265,6 +265,88 @@ public class ClientecontratStepDefinition {
 
 
 
+
+
+
+
+
+
+
+    @Given("entra a cliente {string}")
+    public void entra_a_cliente(String string) {
+        client.Acerinox.click();
+
+    }
+
+    @When("hago clic a perfil {string}")
+    public void hago_clic_a_perfil(String string) {
+        client.perfil.click();
+        client.option.click();
+
+    }
+
+    @And("hago clic en centros de trabajo {string}")
+    public void hago_clic_en_centros_de_trabajo(String string) {
+
+    }
+
+    @And("hago clic a negocio y selecciona una {string}")
+    public void hago_clic_a_negocio_y_selecciona_una(String string) {
+
+    }
+
+    @And("hago clic en la zona y selecciona una {string}")
+    public void hago_clic_en_la_zona_y_selecciona_una(String string) {
+
+    }
+
+    @And("hago clic en la sociedad y seleciona una {string}")
+    public void hago_clic_en_la_sociedad_y_seleciona_una(String string) {
+
+    }
+
+    @And("hago clic sociedad-división y seleciona una {string}")
+    public void hago_clic_sociedad_división_y_seleciona_una(String string) {
+
+    }
+
+    @And("hago clic a riesgo y selecciona una {string}")
+    public void hago_clic_a_riesgo_y_selecciona_una(String string) {
+
+    }
+
+    @And("hago clic en la región y selecciona una {string}")
+    public void hago_clic_en_la_región_y_selecciona_una(String string) {
+
+    }
+
+    @And("hago clic en la centro y seleciona una {string}")
+    public void hago_clic_en_la_centro_y_seleciona_una(String string) {
+
+    }
+
+    @And("hago clic actividad y seleciona una {string}")
+    public void hago_clic_actividad_y_seleciona_una(String string) {
+
+    }
+
+    @And("hago clic a riesgos especiales y selecciona una {string}")
+    public void hago_clic_a_riesgos_especiales_y_selecciona_una(String string) {
+
+
+    }
+    @And("hago clic a departamento y selecciona una {string}")
+    public void hago_clic_a_departamento_y_selecciona_una(String string) {
+
+    }
+
+    @And("hago clic a area y selecciona una {string}")
+    public void hago_clic_a_area_y_selecciona_una(String string) {
+
+
+
+
+    }
 
 }
 

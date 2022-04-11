@@ -23,11 +23,68 @@ public class Cambiar {
     @FindBy(tagName = "h4")
     public WebElement achilles;
 
+    @FindBy(xpath = "//li[@onclick=\"AjaxServicePost(1,'Service/SetCurrentUserType')\"]")
+    public WebElement Supplier;
+
+    @FindBy(xpath = "//li[@onclick=\"AjaxServicePost(2,'Service/SetCurrentUserType')\"]")
+    public WebElement Operator;
+
+    @FindBy(xpath = "//li[@onclick=\"AjaxServicePost(3,'Service/SetCurrentUserType')\"]")
+    public WebElement Achilles;
+
+
+
     @FindBy(css =".hvr-shrink")
     public WebElement cambiar;
 
-    @FindBy(linkText ="Supplier (sim.)")
-    public  WebElement rols;
+
+
+    @FindBy(xpath = "//img[@class=\"selected-image\"]")
+    public WebElement Selectcliente;
+
+    @FindBy(id = "OP-21")
+    public WebElement Acerinox;
+
+    @FindBy(id = "OP-25")
+    public WebElement Berge;
+
+    @FindBy(id = "OP-22")
+    public WebElement Cemex;
+
+    @FindBy(id = "OP-26")
+    public WebElement CIMSA;
+
+    @FindBy(id ="OP-20")
+    public WebElement FreseniusMC;
+
+    @FindBy(id ="OP-6")
+    public WebElement MetroMalaga;
+
+    @FindBy(id ="OP-11")
+    public WebElement Naturgy;
+
+    @FindBy(id ="OP-13")
+    public WebElement Brazil;
+
+    @FindBy(id ="OP-24")
+    public WebElement Chile;
+
+    @FindBy(id ="OP-15")
+    public WebElement Mexico;
+
+    @FindBy(id ="OP-16")
+    public WebElement Panama;
+
+    @FindBy(id ="OP-17")
+    public WebElement Dominica;
+
+    @FindBy(id ="OP-5")
+    public WebElement TMB;
+
+
+
+
+
 
 
 

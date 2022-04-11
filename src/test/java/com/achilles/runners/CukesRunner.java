@@ -12,7 +12,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features/Login.feature",
         glue = "com/achilles/step_definitions",
         dryRun = false,
-        tags = "@Cambiarrol"
+        tags = "@Añadircontrato"
 )
 public class CukesRunner {
 }

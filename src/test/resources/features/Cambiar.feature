@@ -11,8 +11,16 @@ Background:
 @Cambiarrol
 
 Scenario: Menu de roles
-  Given hago click en el boton de supplier
-  Then yo veo los opciones y elegi uno
+  Given hago click en el boton de roles
+  When se abre el menu de roles y elegi el rol supplier
+  And con el mover el raton ir al menu y elegi operator
+  Then yo veo que puedo cambiar los roles
+
+
+
+
+
+
 
 
 
@@ -22,10 +30,18 @@ Scenario: Menu de roles
     When hago clic en el boton de buyers
     Then se abre la opcion de buyers y elegi "<buyer>"
     Examples:
-    |Acerinox|
-    |Berge   |
-    |Cemex   |
-    |Cepsa   |
-    |Çimsa   |
-    |Indra   |
-    |Naturgy |
+      | Acerinox    |
+      | Berge       |
+      | Cemex       |
+      | Cepsa       |
+      | CIMSA       |
+      | Naturgy     |
+      | FreseniusMC |
+      | MetroMalaga |
+      | Naturgy     |
+      | Brazil      |
+      | Chile       |
+      | Mexico      |
+      | Panama      |
+      | Dominica    |
+      | TMB         |

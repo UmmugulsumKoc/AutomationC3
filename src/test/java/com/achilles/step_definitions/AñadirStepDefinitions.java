@@ -57,7 +57,7 @@ public class AñadirStepDefinitions {
 
     @And("relleno el numero de contrato {string}")
     public void relleno_el_numero_de_contrato(String string) throws InterruptedException {
-        añadir.numerocontrato.sendKeys("000020222503");
+        añadir.numerocontrato.sendKeys("000020222503k");
         Thread.sleep(2000);
     }
 
@@ -180,6 +180,15 @@ public class AñadirStepDefinitions {
 
     }
 
+
+    @When("escribo por el describtion test")
+    public void escribo_por_el_describtion_test() {
+        añadir.descripcion.sendKeys("test");
+
+
+
+
+    }
     @When("selecciona un Subcontratista Nivel de contratación {int}")
     public void selecciona_un_Subcontratista_Nivel_de_contratación(Integer int1) throws InterruptedException {
         añadir.subcontratista.click();

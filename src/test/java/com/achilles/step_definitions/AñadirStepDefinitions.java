@@ -1,6 +1,7 @@
 package com.achilles.step_definitions;
 
 import com.achilles.pages.Añadir;
+import com.achilles.pages.Clientecontrat;
 import com.achilles.utilities.BrowserUtils;
 import com.achilles.utilities.Driver;
 import io.cucumber.java.en.And;
@@ -16,6 +17,11 @@ import java.util.Map;
 
 public class AñadirStepDefinitions {
     Añadir añadir = new Añadir();
+
+
+    Clientecontrat responid = new Clientecontrat();
+
+
 
 
     //@Given("seleciona el buyer Cepsa")
@@ -111,8 +117,10 @@ public class AñadirStepDefinitions {
     @And("se abre la pantalla de responsable y hago clic a seleccione")
     public void se_abre_la_pantalla_de_responsable_y_hago_clic_a_seleccione() throws InterruptedException {
         Thread.sleep(7000);
-        añadir.selectid.click();
-        añadir.selectResponsable().selectByVisibleText(". CARLOS GARCIA GARCIA (carlos.garcia@cepsa.com)");
+        responid.selectresponsableid();
+
+
+
 
 
     }

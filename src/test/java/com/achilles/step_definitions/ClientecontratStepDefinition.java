@@ -6,6 +6,9 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.util.Random;
 
 public class ClientecontratStepDefinition {
     Clientecontrat client = new Clientecontrat();
@@ -25,8 +28,11 @@ public class ClientecontratStepDefinition {
     @When("relleno el numero de contrato para Acerinox {string}")
     public void relleno_el_numero_de_contrato_para_Acerinox(String string) throws InterruptedException {
 
+
+        Random rn =new Random();
         client.Acerinoxcontrato.sendKeys("000020223003K");
         Thread.sleep(2000);
+
         //client.numero.click();
 
     }
@@ -273,75 +279,123 @@ public class ClientecontratStepDefinition {
 
 
     @Given("entra a cliente {string}")
-    public void entra_a_cliente(String string) {
-        client.Acerinox.click();
+    public void entra_a_cliente(String string) throws InterruptedException {
+       // client.Acerinox.click();
+        //Thread.sleep(2000);
+       // client.Berge.click();
+        //client.Cemex.click();
+       // client.CIMSA.click();
+       // client.FreseniusMC.click();
+        //client.MetroMalaga.click();
+       // client.Naturgy.click();
+       // client.Brazil.click();
+        //client.Chile.click();
+       // client.Mexico.click();
+       // client.Panama.click();
+        //client.Dominica.click();
+       // client.TMB.click();
+        client.Selectcliente.click();
+        Thread.sleep(2000);
+        client.selectcliente(string).click();
+
 
     }
 
     @When("hago clic a perfil {string}")
-    public void hago_clic_a_perfil(String string) {
+    public void hago_clic_a_perfil(String string) throws InterruptedException {
+
         client.perfil.click();
+        Thread.sleep(2000);
         client.option.click();
 
     }
 
     @And("hago clic en centros de trabajo {string}")
     public void hago_clic_en_centros_de_trabajo(String string) {
+        client.selectCentroTrabajo(string);
 
     }
 
     @And("hago clic a negocio y selecciona una {string}")
     public void hago_clic_a_negocio_y_selecciona_una(String string) {
+        if (!string.equalsIgnoreCase("libre")) {
+            client.negocio.click();
+            client.negocioption.click();
+
+        }
 
     }
 
     @And("hago clic en la zona y selecciona una {string}")
     public void hago_clic_en_la_zona_y_selecciona_una(String string) {
+        if (!string.equalsIgnoreCase("libre")) {
 
+
+            client.zona.click();
+            client.zonaoption.click();
+        }
     }
 
     @And("hago clic en la sociedad y seleciona una {string}")
     public void hago_clic_en_la_sociedad_y_seleciona_una(String string) {
 
+        if (!string.equalsIgnoreCase("libre")) {
+            client.sociedad.click();
+            client.sociedadoption.click();
+        }
     }
 
     @And("hago clic sociedad-división y seleciona una {string}")
     public void hago_clic_sociedad_división_y_seleciona_una(String string) {
-
+        if (!string.equalsIgnoreCase("libre")) {
+            client.sociedadivision.click();
+            client.sociedadivisionoption.click();
+        }
     }
 
     @And("hago clic a riesgo y selecciona una {string}")
     public void hago_clic_a_riesgo_y_selecciona_una(String string) {
-
+        if (!string.equalsIgnoreCase("libre")) {
+            client.riesgo.click();
+            client.riesgoption.click();
+        }
     }
 
     @And("hago clic en la región y selecciona una {string}")
     public void hago_clic_en_la_región_y_selecciona_una(String string) {
+        if (!string.equalsIgnoreCase("libre")) {
+            client.region.click();
+        }
 
     }
 
     @And("hago clic en la centro y seleciona una {string}")
     public void hago_clic_en_la_centro_y_seleciona_una(String string) {
+        if (!string.equalsIgnoreCase("libre")) {}
 
     }
 
     @And("hago clic actividad y seleciona una {string}")
     public void hago_clic_actividad_y_seleciona_una(String string) {
+        if (!string.equalsIgnoreCase("libre")) {}
 
     }
 
     @And("hago clic a riesgos especiales y selecciona una {string}")
     public void hago_clic_a_riesgos_especiales_y_selecciona_una(String string) {
+        if (!string.equalsIgnoreCase("libre")) {}
 
 
     }
     @And("hago clic a departamento y selecciona una {string}")
     public void hago_clic_a_departamento_y_selecciona_una(String string) {
+        if (!string.equalsIgnoreCase("libre")) {}
 
     }
 
     @And("hago clic a area y selecciona una {string}")
     public void hago_clic_a_area_y_selecciona_una(String string) {
+        if (!string.equalsIgnoreCase("libre")) {}
 
 
 

@@ -2,6 +2,7 @@ package com.achilles.step_definitions;
 
 import com.achilles.pages.Filtrar;
 import com.achilles.utilities.BrowserUtils;
+import com.achilles.utilities.Driver;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -24,7 +25,7 @@ Filtrar validation= new Filtrar();
     @When("elegi Validar documentos")
     public void elegi_Validar_documentos() throws InterruptedException {
 
-        Thread.sleep(2000);
+       // WebDriverWait wait = new WebDriverWait(Driver.getDriver(),10);
         validation.ValidarDocumentos.findElement(By.xpath("//a[@href=\"/Search/Documents/ValidateDocuments\"]"));
         validation.ValidarDocumentos.click();
    }

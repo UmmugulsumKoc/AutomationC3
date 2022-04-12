@@ -1,6 +1,7 @@
 package com.achilles.pages;
 
 import com.achilles.utilities.Driver;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -71,40 +72,6 @@ public class Clientecontrat {
     @FindBy(xpath = "//img[@class=\"selected-image\"]")
     public WebElement SelectclienteB;
 
-    @FindBy(id = "OP-25")
-    public WebElement Berge;
-
-    @FindBy(id = "structure1")
-    public WebElement negocio;
-
-    @FindBy(xpath = "//*[@id=\"structure1\"]//option[4]")
-    public WebElement negocioption;
-
-    @FindBy(id = "structure2")
-    public WebElement zona;
-
-    @FindBy(xpath = "//*[@id=\"structure2\"]//option[4]")
-    public WebElement zonaoption;
-
-    @FindBy(id = "structure3")
-    public WebElement sociedad;
-
-    @FindBy(xpath = "//*[@id=\"structure3\"]//option[3]")
-    public WebElement sociedadoption;
-
-
-
-    @FindBy(id = "structure4")
-    public WebElement sociedadivision;
-
-    @FindBy(xpath = "//*[@id=\"structure4\"]//optgroup/option[1]")
-    public WebElement sociedadivisionoption;
-
-    @FindBy(id = "structure5")
-    public WebElement riesgo;
-
-    @FindBy(xpath = "//*[@id=\"structure5\"]//option[3]")
-    public WebElement riesgoption;
 
     @FindBy(id = "responsibleId")
     public WebElement responsable;
@@ -135,8 +102,6 @@ public class Clientecontrat {
     //@FindBy(xpath = "//img[@class=\"selected-image\"]")
     //public WebElement Selectcliente;
 
-    @FindBy(id = "OP-22")
-    public WebElement Cemex;
 
     //@FindBy(id = "structure1")
     //public WebElement negocio;
@@ -147,9 +112,70 @@ public class Clientecontrat {
     //@FindBy(id = "structure1")
     //public WebElement negocio;
 
+
+
+
+
+
+
+
+    @FindBy(id = "OP-21")
+    public WebElement Acerinox;
+
+    @FindBy(id = "structure1")
+    public WebElement perfil;
+
+    @FindBy(xpath = "//*[@id=\"structure1\"]//option[2]")
+    public WebElement option;
+
+    @FindBy(id = "structure2")
+    public WebElement CentroTrabajo;
+
+    @FindBy(xpath = "//option[@value=\"9\"]")
+    public WebElement Centroopcion;
+
+
+
+
+    @FindBy(id = "OP-25")
+    public WebElement Berge;
+
+    @FindBy(id = "structure1")
+    public WebElement negocio;
+
+    @FindBy(xpath = "//*[@id=\"structure1\"]//option[4]")
+    public WebElement negocioption;
+
+    @FindBy(id = "structure2")
+    public WebElement zona;
+
+    @FindBy(xpath = "//*[@id=\"structure2\"]//option[4]")
+    public WebElement zonaoption;
+
+    @FindBy(id = "structure3")
+    public WebElement sociedad;
+
+    @FindBy(xpath = "//*[@id=\"structure3\"]//option[3]")
+    public WebElement sociedadoption;
+
+    @FindBy(id = "structure4")
+    public WebElement sociedadivision;
+
+    @FindBy(xpath = "//*[@id=\"structure4\"]//optgroup/option[1]")
+    public WebElement sociedadivisionoption;
+
+    @FindBy(id = "structure5")
+    public WebElement riesgo;
+
+    @FindBy(xpath = "//*[@id=\"structure5\"]//option[3]")
+    public WebElement riesgoption;
+
+
+    @FindBy(id = "OP-22")
+    public WebElement Cemex;
+
     @FindBy(xpath = "//*[@id=\"structure1\"]//option[6]")
     public WebElement negocioptionC;
-
 
     @FindBy(id = "structure2")
     public WebElement region;
@@ -176,6 +202,9 @@ public class Clientecontrat {
     public WebElement riesgosption;
 
 
+
+
+
     @FindBy(id = "OP-26")
     public WebElement CIMSA;
 
@@ -188,20 +217,7 @@ public class Clientecontrat {
 
 
 
-    @FindBy(id = "OP-21")
-    public WebElement Acerinox;
 
-    @FindBy(id = "structure1")
-    public WebElement perfil;
-
-    @FindBy(xpath = "//*[@id=\"structure1\"]//option[3]")
-    public WebElement option;
-
-    @FindBy(id = "structure2")
-    public WebElement CentroTrabajo;
-
-    @FindBy(xpath = "//option[@value=\"9\"]")
-    public WebElement Centroopcion;
 
 
     @FindBy(id ="OP-20")
@@ -232,9 +248,18 @@ public class Clientecontrat {
     public WebElement TMB;
 
 
+    public void selectCentroTrabajo(String CTR){
+        Select select= new Select(CentroTrabajo);
+        select.selectByValue(CTR);
+    }
+    public void selectresponsableid(){
+        Select select= new Select(selectid);
+        select.selectByIndex(1);
+    }
 
-
-
+   public WebElement selectcliente(String cliente) {
+       return Driver.get().findElement(By.id("OP-"+cliente+""));
+   }
 
     public Select selectResponsable() {
         return new Select(selectid);

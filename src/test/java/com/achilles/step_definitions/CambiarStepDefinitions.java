@@ -1,14 +1,19 @@
 package com.achilles.step_definitions;
 
 import com.achilles.pages.Cambiar;
+import com.achilles.utilities.Driver;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.Wait;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class CambiarStepDefinitions {
     Cambiar cambiar = new Cambiar();
@@ -67,19 +72,19 @@ public class CambiarStepDefinitions {
     @Then("se abre la opcion de buyers y elegi {string}")
     public void se_abre_la_opcion_de_buyers_y_elegi(String string) throws InterruptedException {
         cambiar.Acerinox.click();
-        Thread.sleep(2000);
+        Thread.sleep(7000);
         cambiar.Selectcliente.click();
 
         cambiar.Berge.click();
-        Thread.sleep(2000);
+        Thread.sleep(7000);
         cambiar.Selectcliente.click();
 
         cambiar.Cemex.click();
-        Thread.sleep(2000);
+        Thread.sleep(7000);
         cambiar.Selectcliente.click();
 
         cambiar.CIMSA.click();
-        Thread.sleep(2000);
+        Thread.sleep(7000);
         cambiar.Selectcliente.click();
 
         cambiar.FreseniusMC.click();
@@ -87,7 +92,7 @@ public class CambiarStepDefinitions {
         cambiar.Selectcliente.click();
 
         cambiar.MetroMalaga.click();
-        Thread.sleep(2000);
+        Thread.sleep(7000);
         cambiar.Selectcliente.click();
 
         cambiar.Naturgy.click();
@@ -95,7 +100,7 @@ public class CambiarStepDefinitions {
         cambiar.Selectcliente.click();
 
         cambiar.Brazil.click();
-        Thread.sleep(2000);
+        Thread.sleep(7000);
         cambiar.Selectcliente.click();
 
         cambiar.Chile.click();
@@ -103,7 +108,7 @@ public class CambiarStepDefinitions {
         cambiar.Selectcliente.click();
 
         cambiar.Mexico.click();
-        Thread.sleep(2000);
+        Thread.sleep(7000);
         cambiar.Selectcliente.click();
 
         cambiar.Panama.click();
@@ -111,13 +116,45 @@ public class CambiarStepDefinitions {
         cambiar.Selectcliente.click();
 
         cambiar.Dominica.click();
-        Thread.sleep(2000);
+        Thread.sleep(7000);
         cambiar.Selectcliente.click();
 
         cambiar.TMB.click();
 
 
     }
+
+
+
+
+
+
+
+    @Given("estoy en el dropdown menu")
+    public void estoy_en_el_dropdown_menu() {
+        //Driver.getDriver().findElements(By.xpath("//img[@class='selected-image']"));
+        cambiar.Selectcliente.click();
+    }
+
+    @Then("se visualiza todos clientes en el dropdown")
+    public void se_visualiza_todos_clientes_en_el_dropdown(List<String>clientes) {
+        Select select=new Select(cambiar.Selectcliente);
+        List<WebElement> listOfWebElement= select.getOptions();
+        List<String>actualclientes=listOfWebElement.stream().map(WebElement::getText).collect(Collectors.toList());
+        Assert.assertEquals("size did not match.",clientes.size(),actualclientes.size());
+         for (int i = 0; i <= clientes.size()-1; i++) {
+             Assert.assertEquals("los clientes", clientes.get(i),actualclientes);
+         }
+        // Write code here that turns the phrase above into concrete actions
+        // For automatic transformation, change DataTable to one of
+        // E, List<E>, List<List<E>>, List<Map<K,V>>, Map<K,V> or
+        // Map<K, List<V>>. E,K,V must be a String, Integer, Float,
+        // Double, Byte, Short, Long, BigInteger or BigDecimal.
+        //
+        // For other transformations you can register a DataTableType.
+
+    }
+
 
 
 }

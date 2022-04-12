@@ -45,3 +45,26 @@ Scenario: Menu de roles
       | Panama      |
       | Dominica    |
       | TMB         |
+
+
+    @Cambiarbuyers
+
+    Scenario: Es posible cambiar los clientes en el dropdown menu
+      Given estoy en el dropdown menu
+      Then se visualiza todos clientes en el dropdown
+
+        | Acerinox    |
+        | Berge       |
+        | Cemex       |
+        | Cepsa       |
+        | CIMSA       |
+        | Naturgy     |
+        | FreseniusMC |
+        | MetroMalaga |
+        | Naturgy     |
+        | Brazil      |
+        | Chile       |
+        | Mexico      |
+        | Panama      |
+        | Dominica    |
+        | TMB         |

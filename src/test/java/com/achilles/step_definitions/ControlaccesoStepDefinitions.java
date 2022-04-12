@@ -12,10 +12,11 @@ public class ControlaccesoStepDefinitions {
 
     Controlacceso carnet = new Controlacceso();
 
-    @Given("entro en el cliente y cambiarlo a Cemsa")
-    public void entro_en_el_cliente_y_cambiarlo_a_Cemsa() {
+    @Given("entro en el cliente y cambiarlo a Cemex")
+    public void entro_en_el_cliente_y_cambiarlo_a_Cemex() throws InterruptedException {
         carnet.Selectcliente.click();
         carnet.Cemex.click();
+        Thread.sleep(2000);
 
 
 

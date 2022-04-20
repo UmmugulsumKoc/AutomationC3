@@ -23,20 +23,6 @@ public class AñadirStepDefinitions {
 
 
 
-
-    //@Given("seleciona el buyer Cepsa")
-    //public void seleciona_el_buyer_Cepsa() throws InterruptedException {
-
-
-
-        //añadir.buyer.isSelected();
-        //añadir.cepsa.click();
-        //Thread.sleep(2000);
-
-
-
-
-    //}
     @Given("entro en la Contratos en la izquierda")
     public void ento_en_la_Contratos_en_la_izquierda() throws InterruptedException {
 
@@ -61,11 +47,6 @@ public class AñadirStepDefinitions {
 
     }
 
-    @And("relleno el numero de contrato {string}")
-    public void relleno_el_numero_de_contrato(String string) throws InterruptedException {
-        añadir.numerocontrato.sendKeys("000020222503k");
-        Thread.sleep(2000);
-    }
 
     @And("relleno Descripción {string}")
     public void relleno_Descripción(String string) throws InterruptedException {
@@ -84,8 +65,8 @@ public class AñadirStepDefinitions {
 
     @And("selecciona una centro de trabajo")
     public void selecciona_una_centro_de_trabajo() throws InterruptedException {
-        añadir.negocio.click();
-        añadir.cemento.click();
+        //añadir.negocio.click();
+        //añadir.cemento.click();
         Thread.sleep(2000);
 
     }
@@ -116,7 +97,7 @@ public class AñadirStepDefinitions {
 
     @And("se abre la pantalla de responsable y hago clic a seleccione")
     public void se_abre_la_pantalla_de_responsable_y_hago_clic_a_seleccione() throws InterruptedException {
-        Thread.sleep(7000);
+        Thread.sleep(2000);
         responid.selectresponsableid();
 
 
@@ -216,7 +197,7 @@ public class AñadirStepDefinitions {
 
 
         //Thread.sleep(10000);
-        //File file = new File("C:\\Users\\Ummu.Gulsum\\OneDrive - Achilles Information Ltd\\Documentos\\Prueba.pdf");
+        File file = new File("C:/Users/Ummu.Gulsum/OneDrive - Achilles Information Ltd/Documentos/Prueba.pdf");
 
 
         //añadir.subirDocumento.sendKeys(file);

@@ -1,6 +1,7 @@
 package com.achilles.pages;
 
 import com.achilles.utilities.Driver;
+import io.cucumber.java.bs.I;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -8,6 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 import javax.xml.xpath.XPath;
+import java.util.List;
 
 public class Clientecontrat {
 
@@ -159,10 +161,10 @@ public class Clientecontrat {
     public WebElement sociedadoption;
 
     @FindBy(id = "structure4")
-    public WebElement sociedadivision;
+    public WebElement sociedadDivision;
 
     @FindBy(xpath = "//*[@id=\"structure4\"]//optgroup/option[1]")
-    public WebElement sociedadivisionoption;
+    public WebElement sociedadDivisionoption;
 
     @FindBy(id = "structure5")
     public WebElement riesgo;
@@ -196,7 +198,7 @@ public class Clientecontrat {
     public WebElement Actividadoption;
 
     @FindBy(id = "specialRiskId")
-    public WebElement riesgos;
+    public WebElement riesgoEspecial;
 
     @FindBy(xpath = "//*[@id=\"specialRiskId\"]//option[4]")
     public WebElement riesgosption;
@@ -209,19 +211,39 @@ public class Clientecontrat {
     public WebElement CIMSA;
 
     @FindBy(id = "structure1")
-    public WebElement negociocimsa;
+    public WebElement negocioCimsa;
 
     @FindBy(xpath = "//*[@id=\"structure1\"]//optgroup//option")
     public WebElement negociacimssaoption;
 
 
+    @FindBy(id = "OP-8")
+    public WebElement Cepsa;
 
+    @FindBy(id = "structure2")
+    public WebElement Departamento;
+
+    @FindBy(id = "//*[@id='structure2']//option[4]")
+    public WebElement Departamentooption;
 
 
 
 
     @FindBy(id ="OP-20")
     public WebElement FreseniusMC;
+
+    @FindBy(id ="structure1")
+    public WebElement Sociedad;
+
+    @FindBy(xpath = "//*[@id=\"structure1\"]//option[3]")
+    public WebElement Sociedadoption;
+
+
+
+
+
+
+
 
     @FindBy(id ="OP-6")
     public WebElement MetroMalaga;
@@ -248,6 +270,69 @@ public class Clientecontrat {
     public WebElement TMB;
 
 
+
+    public void selectSociedad(String CTR) {
+        Select select = new Select(Sociedad);
+        select.selectByIndex(Integer.parseInt(CTR));
+
+    }
+
+
+    public void selectnegocioCimsa(String CTR) {
+        Select select = new Select(negocioCimsa);
+        select.selectByIndex(Integer.parseInt(CTR));
+
+    }
+
+
+
+    public void selectDepartamento(String CTR) {
+        Select select = new Select(Departamento);
+        select.selectByIndex(Integer.parseInt(CTR));
+
+    }
+
+    public void selectriesgoEspecial(String CTR){
+        Select select= new Select(riesgoEspecial);
+        select.selectByIndex(Integer.parseInt(CTR));
+    }
+
+    public void selectActividad(String CTR){
+        Select select= new Select(Actividad);
+        select.selectByIndex(Integer.parseInt(CTR));
+    }
+
+    public void selectcentro(String CTR){
+        Select select= new Select(centro);
+        select.selectByValue(CTR);
+    }
+
+    public void selectregion(String CTR){
+        Select select= new Select(region);
+        select.selectByIndex(Integer.parseInt(CTR));
+
+    }
+
+
+    public void selectnegocio(String CTR){
+        Select select= new Select(negocio);
+        select.selectByIndex(Integer.parseInt(CTR));
+
+
+    }
+
+    public void selectnuevo(){
+        Select select= new Select(personA);
+        select.selectByIndex(1);
+    }
+
+
+    public void selectzona(String CTR){
+        Select select= new Select(zona);
+        select.selectByIndex(Integer.parseInt(CTR));
+    }
+
+
     public void selectCentroTrabajo(String CTR){
         Select select= new Select(CentroTrabajo);
         select.selectByValue(CTR);
@@ -257,8 +342,8 @@ public class Clientecontrat {
         select.selectByIndex(1);
     }
 
-   public WebElement selectcliente(String cliente) {
-       return Driver.get().findElement(By.id("OP-"+cliente+""));
+   public WebElement selectcliente(String Cliente) {
+       return Driver.get().findElement(By.id("OP-"+Cliente+""));
    }
 
     public Select selectResponsable() {

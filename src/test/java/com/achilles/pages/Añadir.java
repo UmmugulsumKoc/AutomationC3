@@ -45,11 +45,10 @@ public class Añadir {
     @FindBy(xpath = "//*[@id=\"SupplierTextId\"]/option[3]")
     public WebElement suaz;
 
-    @FindBy(id = "structure1")
-    public WebElement negocio;
 
-    @FindBy(xpath = "//*[@id=\"structure1\"]/optgroup/option[2]")
-    public WebElement cemento;
+
+    //@FindBy(xpath = "//*[@id=\"structure1\"]/optgroup/option[2]")
+    //public WebElement cemento;
 
     @FindBy(id = "structure2")
     public WebElement region;

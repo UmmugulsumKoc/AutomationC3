@@ -6,8 +6,11 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Random;
 
 public class ClientecontratStepDefinition {
@@ -25,12 +28,18 @@ public class ClientecontratStepDefinition {
 
     }
 
-    @When("relleno el numero de contrato para Acerinox {string}")
-    public void relleno_el_numero_de_contrato_para_Acerinox(String string) throws InterruptedException {
+    @When("relleno el numero de contrato {string}")
+    public void relleno_el_numero_de_contrato(String string) throws InterruptedException {
 
 
         Random rn =new Random();
-        client.Acerinoxcontrato.sendKeys("000020223003K");
+        LocalDateTime myDateObj= LocalDateTime.now();
+
+        DateTimeFormatter myFormatObj= DateTimeFormatter.ofPattern("dd-MM-yy");
+
+        String formattedDate=rn.nextInt(10000)+""+myDateObj.format(myFormatObj).replaceAll("-","");
+
+        client.Acerinoxcontrato.sendKeys(formattedDate);
         Thread.sleep(2000);
 
         //client.numero.click();
@@ -93,9 +102,12 @@ public class ClientecontratStepDefinition {
 
     @And("hago clic en seleccione y e abre pantalla con personas. Elegi uno")
     public void hago_clic_en_seleccione_y_e_abre_pantalla_con_personas_Elegi_uno() throws InterruptedException {
-        client.personA.click();
-        client.selecperson.click();
-        client.selectPersonA.click();
+
+        client.selectnuevo();
+        client.selectPerson.click();
+
+
+
 
 
     }
@@ -151,10 +163,10 @@ public class ClientecontratStepDefinition {
     }
 
     @And("hago clic sociedad-división y seleciona una")
-    public void hago_clic_sociedad_división_y_seleciona_una() throws InterruptedException {
-        BrowserUtils.scrollToElement(client.sociedadivision);
-        client.sociedadivision.click();
-        client.sociedadivisionoption.click();
+    public void hago_clic_sociedad_division_y_seleciona_una() throws InterruptedException {
+        BrowserUtils.scrollToElement(client.sociedadDivision);
+        client.sociedadDivision.click();
+        client.sociedadDivisionoption.click();
         Thread.sleep(2000);
     }
 
@@ -251,7 +263,7 @@ public class ClientecontratStepDefinition {
 
     @When("hago clic a riesgos especiales y selecciona una")
     public void hago_clic_a_riesgos_especiales_y_selecciona_una() {
-        client.riesgos.click();
+        client.riesgoEspecial.click();
         client.riesgosption.click();
         //client.selectResponsable().selectByVisibleText("Alba Valle (alba.valle@cemex.com)");
 
@@ -297,42 +309,51 @@ public class ClientecontratStepDefinition {
         client.Selectcliente.click();
         Thread.sleep(2000);
         client.selectcliente(string).click();
+        Thread.sleep(2000);
 
 
     }
 
     @When("hago clic a perfil {string}")
     public void hago_clic_a_perfil(String string) throws InterruptedException {
+        if (!string.equalsIgnoreCase("libre")) {
+            client.perfil.click();
+            Thread.sleep(2000);
+            client.option.click();
 
-        client.perfil.click();
-        Thread.sleep(2000);
-        client.option.click();
-
+        }
     }
 
     @And("hago clic en centros de trabajo {string}")
-    public void hago_clic_en_centros_de_trabajo(String string) {
-        client.selectCentroTrabajo(string);
+    public void hago_clic_en_centros_de_trabajo(String string) throws InterruptedException {
+        if (!string.equalsIgnoreCase("libre")) {
+            client.selectCentroTrabajo(string);
+            Thread.sleep(2000);
 
+        }
     }
 
     @And("hago clic a negocio y selecciona una {string}")
     public void hago_clic_a_negocio_y_selecciona_una(String string) {
         if (!string.equalsIgnoreCase("libre")) {
-            client.negocio.click();
-            client.negocioption.click();
+
+           client.selectnegocio(string);
+
+           client.selectnegocioCimsa(string);
+           //client.negociacimssaoption.click();
 
         }
 
     }
 
     @And("hago clic en la zona y selecciona una {string}")
-    public void hago_clic_en_la_zona_y_selecciona_una(String string) {
+    public void hago_clic_en_la_zona_y_selecciona_una(String string) throws InterruptedException {
+        Thread.sleep(2000);
         if (!string.equalsIgnoreCase("libre")) {
 
 
-            client.zona.click();
-            client.zonaoption.click();
+
+            client.selectzona(string);
         }
     }
 
@@ -340,16 +361,18 @@ public class ClientecontratStepDefinition {
     public void hago_clic_en_la_sociedad_y_seleciona_una(String string) {
 
         if (!string.equalsIgnoreCase("libre")) {
-            client.sociedad.click();
-            client.sociedadoption.click();
+           // client.selectSociedad(string);
+            client.Sociedad.click();
+            client.Sociedadoption.click();
         }
     }
 
-    @And("hago clic sociedad-división y seleciona una {string}")
-    public void hago_clic_sociedad_división_y_seleciona_una(String string) {
+    @And("hago clic sociedadDivisión y seleciona una {string}")
+    public void hago_clic_sociedadDivision_y_seleciona_una(String string) {
+
         if (!string.equalsIgnoreCase("libre")) {
-            client.sociedadivision.click();
-            client.sociedadivisionoption.click();
+            client.sociedadDivision.click();
+            client.sociedadDivisionoption.click();
         }
     }
 
@@ -361,41 +384,58 @@ public class ClientecontratStepDefinition {
         }
     }
 
-    @And("hago clic en la región y selecciona una {string}")
-    public void hago_clic_en_la_región_y_selecciona_una(String string) {
+    @And("hago clic en la region y selecciona una {string}")
+    public void hago_clic_en_la_region_y_selecciona_una(String string) {
         if (!string.equalsIgnoreCase("libre")) {
-            client.region.click();
+           client.selectregion(string);
+
         }
 
     }
 
     @And("hago clic en la centro y seleciona una {string}")
     public void hago_clic_en_la_centro_y_seleciona_una(String string) {
-        if (!string.equalsIgnoreCase("libre")) {}
+        if (!string.equalsIgnoreCase("libre")) {
+            //client.selectcentro(string);
+            client.centro.click();
+            client.centroption.click();
+        }
 
     }
 
     @And("hago clic actividad y seleciona una {string}")
     public void hago_clic_actividad_y_seleciona_una(String string) {
-        if (!string.equalsIgnoreCase("libre")) {}
+        if (!string.equalsIgnoreCase("libre")) {
+            client.selectActividad(string);
+
+        }
 
     }
 
     @And("hago clic a riesgos especiales y selecciona una {string}")
     public void hago_clic_a_riesgos_especiales_y_selecciona_una(String string) {
-        if (!string.equalsIgnoreCase("libre")) {}
+        if (!string.equalsIgnoreCase("libre")) {
+
+            client.selectriesgoEspecial(string);
+        }
 
 
     }
     @And("hago clic a departamento y selecciona una {string}")
     public void hago_clic_a_departamento_y_selecciona_una(String string) {
-        if (!string.equalsIgnoreCase("libre")) {}
+        if (!string.equalsIgnoreCase("libre")) {
+
+            client.selectDepartamento(string);
+
+        }
 
     }
 
     @And("hago clic a area y selecciona una {string}")
     public void hago_clic_a_area_y_selecciona_una(String string) {
-        if (!string.equalsIgnoreCase("libre")) {}
+        if (!string.equalsIgnoreCase("libre")) {
+
+        }
 
 
 

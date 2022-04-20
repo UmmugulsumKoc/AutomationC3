@@ -37,7 +37,7 @@ Feature: Login
       Given entro en la Contratos en la izquierda
       When abre menu y elegi Gestión de contratos
       And hago clic en el boton Añadir
-      And escribo del numero "000020222403k" de contrado y hago clic
+      And escribo del numero "000020222403" de contrado y hago clic
       And escribo por el describtion test
       And selecciona un Subcontratista Nivel de contratación 1
       And hago clic en el boton subir documento y subir uno

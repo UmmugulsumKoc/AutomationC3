@@ -13,6 +13,8 @@ import java.util.List;
 
 public class Clientecontrat {
 
+    public String ClientId;
+
 
     public Clientecontrat(){
         PageFactory.initElements(Driver.get(), this);
@@ -90,6 +92,9 @@ public class Clientecontrat {
     @FindBy(id="selectedUserId")
     public WebElement person;
 
+    @FindBy(xpath = "//*[@id=\"selectedUserId\"]//option")
+    public WebElement SeleccionePerson;
+
     @FindBy(xpath = "//*[@id=\"selectedUserId\"]//option[2]")
     public WebElement option1;
 
@@ -151,19 +156,19 @@ public class Clientecontrat {
     @FindBy(id = "structure2")
     public WebElement zona;
 
-    @FindBy(xpath = "//*[@id=\"structure2\"]//option[4]")
+    @FindBy(xpath = "//*[@id=\"structure2\"]//optgroup//option[1]")
     public WebElement zonaoption;
 
     @FindBy(id = "structure3")
-    public WebElement sociedad;
+    public WebElement sociedadberge;
 
-    @FindBy(xpath = "//*[@id=\"structure3\"]//option[3]")
+    @FindBy(xpath = "//*[@id=\"structure3\"]//option[2]")
     public WebElement sociedadoption;
 
     @FindBy(id = "structure4")
     public WebElement sociedadDivision;
 
-    @FindBy(xpath = "//*[@id=\"structure4\"]//optgroup/option[1]")
+    @FindBy(xpath = "//*[@id=\"structure4\"]//optgroup/option")
     public WebElement sociedadDivisionoption;
 
     @FindBy(id = "structure5")
@@ -240,6 +245,11 @@ public class Clientecontrat {
 
 
 
+    @FindBy(id ="OP-1")
+    public WebElement Indra;
+
+    @FindBy(id = "structure4")
+    public WebElement ActividadI;
 
 
 
@@ -270,9 +280,55 @@ public class Clientecontrat {
     public WebElement TMB;
 
 
+    public void selectSeleccionePerson(String CTR){
+        Select select= new Select(SeleccionePerson);
+        select.selectByIndex(Integer.parseInt(CTR));
+    }
 
-    public void selectSociedad(String CTR) {
-        Select select = new Select(Sociedad);
+
+    public void selectperfil(String CTR){
+        WebElement element;
+        if (ClientId.equalsIgnoreCase("20")){
+            element=sociedadberge;
+
+        }else {
+            element=Actividad;
+        }
+        Select select= new Select(element);
+        select.selectByIndex(Integer.parseInt(CTR));
+    }
+
+
+    public void selectActividadI(String CTR){
+
+        WebElement element;
+        if (ClientId.equalsIgnoreCase("20")||ClientId.equalsIgnoreCase("13")){
+            element=ActividadI;
+
+        }else {
+            element=CentroTrabajo;
+        }
+        Select select= new Select(element);
+        select.selectByIndex(Integer.parseInt(CTR));
+    }
+
+
+    public void selectsociedadDivision(String CTR) {
+        Select select = new Select(sociedadDivision);
+        select.selectByIndex(Integer.parseInt(CTR));
+
+    }
+
+    public void selectsociedadberge(String CTR) {
+
+        WebElement element;
+        if (ClientId.equalsIgnoreCase("20")){
+            element=Sociedad;
+
+        }else {
+            element=sociedadberge;
+        }
+        Select select= new Select(element);
         select.selectByIndex(Integer.parseInt(CTR));
 
     }
@@ -287,7 +343,14 @@ public class Clientecontrat {
 
 
     public void selectDepartamento(String CTR) {
-        Select select = new Select(Departamento);
+            WebElement element;
+            if (ClientId.equalsIgnoreCase("11")||ClientId.equalsIgnoreCase("13")){
+                element=Departamento;
+
+            }else {
+                element=sociedadberge;
+            }
+            Select select= new Select(element);
         select.selectByIndex(Integer.parseInt(CTR));
 
     }
@@ -298,7 +361,16 @@ public class Clientecontrat {
     }
 
     public void selectActividad(String CTR){
-        Select select= new Select(Actividad);
+
+        WebElement element;
+        if (ClientId.equalsIgnoreCase("8")||ClientId.equalsIgnoreCase("13")){
+            element=sociedadberge;
+
+        }else {
+            element=perfil;
+        }
+        Select select= new Select(element);
+
         select.selectByIndex(Integer.parseInt(CTR));
     }
 
@@ -315,7 +387,14 @@ public class Clientecontrat {
 
 
     public void selectnegocio(String CTR){
-        Select select= new Select(negocio);
+        WebElement element;
+        if (ClientId.equalsIgnoreCase("1")||ClientId.equalsIgnoreCase("6")||ClientId.equalsIgnoreCase("11")||ClientId.equalsIgnoreCase("13")){
+            element=negocio;
+
+        }else {
+            element=Actividad;
+        }
+        Select select= new Select(element);
         select.selectByIndex(Integer.parseInt(CTR));
 
 
@@ -326,6 +405,12 @@ public class Clientecontrat {
         select.selectByIndex(1);
     }
 
+
+
+    public void selectzonaoption(String CTR){
+        Select select= new Select(zonaoption);
+        select.selectByIndex(Integer.parseInt(CTR));
+    }
 
     public void selectzona(String CTR){
         Select select= new Select(zona);

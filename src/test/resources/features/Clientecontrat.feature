@@ -17,8 +17,8 @@ Scenario Outline: Añadir nuevo contrato
   And relleno por el Descripcion "test1"
   And ir al contratista y selecciona una
   And hago clic a perfil "<Perfil>"
-  And hago clic en centros de trabajo "<Centro Trabajo>"
   And hago clic a negocio y selecciona una "<Negocio>"
+  And hago clic a area y selecciona una "<area>"
   And hago clic en la zona y selecciona una "<Zona>"
   And hago clic en la sociedad y seleciona una "<Sociedad>"
   And hago clic sociedadDivisión y seleciona una "<sociedadDivision>"
@@ -28,7 +28,7 @@ Scenario Outline: Añadir nuevo contrato
   And hago clic actividad y seleciona una "<actividad>"
   And hago clic a riesgos especiales y selecciona una "<riesgo especial>"
   And hago clic a departamento y selecciona una "<departamento>"
-  And hago clic a area y selecciona una "<area>"
+  And hago clic en centros de trabajo "<Centro Trabajo>"
   And hago clic a Añadir Responsable
   And se abre la pantalla de responsable y hago clic a seleccione
   And selecciona una responsable y hago clic en el boton
@@ -40,22 +40,22 @@ Scenario Outline: Añadir nuevo contrato
   Then el estado de contrado esta validada
 
   Examples:
-    | Cliente | Perfil          | Centro Trabajo | Negocio | Zona  | Sociedad | sociedadDivision | riesgo     | region | centro        | actividad | riesgo especial | departamento | area    |
-    | 21      | Perfil C-Basico | 9              | libre   | libre | libre    | libre            | libre      | libre  | libre         | libre     | libre           | libre        | libre   |
-    | 25      | libre           | libre          | 4       | 1     | Infra    | Servicios        | riesgoalto | libre  | libre         | libre     | libre           | libre        | libre   |
-    | 22      | libre           | libre          | 2       | libre | libre    | libre            | libre      | 7      | Fabrica gador | 5         | 4               | libre        | libre   |
-    | 8       | cofos1          | 9              | libre   | libre | libre    | libre            | libre      | libre  | libre         | libre     | libre           | 3            | libre   |
-    | 26      | libre           | libre          | CEMENTO | libre | libre    | libre            | libre      | norte  | bunol         | mercansia | voladuras       | libre        | libre   |
-    | 20      | libre           | 3              | libre   | libre | 4        | libre            | libre      | libre  | libre         | limpieza  | libre           | libre        | libre   |
-    | 1       | libre           | libre          | libre   | libre | libre    | libre            | libre      |libre   | libre         |           | libre           |              | libre   |
-    | 6       | libre           | libre          | libre   | libre | libre    | libre            | libre      | libre  | libre         | general   | libre           | ingenieria   | libre   |
-    | 11      | libre           | aceca          | redes   | libre | libre    | libre            | libre      | libre  | libre         | libre     | libre           | soporte      | soporte |
-    | 13      | libre           |                |         | libre | libre    | libre            | libre      | libre  | libre         | libre     | libre           |              |         |
-    | 24      | libre           |                |         | libre | libre    | libre            | libre      | libre  | libre         | libre     | libre           |              |         |
-    | 15      | libre           |                |         | libre | libre    | libre            | libre      | libre  | libre         | libre     | libre           |              |         |
-    | 16      | libre           |                |         | libre | libre    | libre            | libre      | libre  | libre         | libre     | libre           |              |         |
-    | 17      | libre           |                |         | libre | libre    | libre            | libre      | libre  | libre         | libre     | libre           |              |         |
-    | 5       | libre           | libre          | libre   | libre | libre    | libre            | bajo       | libre  | libre         | libre     | libre           | tmb          | libre   |
+    | Cliente | Perfil          | Negocio | area  | Zona  | Sociedad | sociedadDivision | riesgo     | region | centro        | actividad | riesgo especial | departamento | Centro Trabajo |
+    #| 21      | Perfil C-Basico | libre   | libre | libre | libre    | libre            | libre      | libre  | libre         | libre     | libre           | libre        | 9              |
+    #| 25      | libre           | 4       | libre | 3     | 2        | 2                | riesgoalto | libre  | libre         | libre     | libre           | libre        | libre          |
+    #| 22      | libre           | 2       | libre | libre | libre    | libre            | libre      | 7      | Fabrica gador | 2         | 4               | libre        | libre          |
+    #| 8       | 2               | libre   | 2     | libre | libre    | libre            | libre      | libre  | libre         | libre     | libre           | libre        | 9              |
+    #| 26      | libre           | 1       | libre | libre | libre    | libre            | libre      | 1      | bunol         | 1         | 2               | libre        | libre          |
+    #| 20      | libre           | libre   | libre | libre | 4        | libre            | libre      | libre  | libre         | 2         | libre           | libre        | 40             |
+    #| 1       | libre           | libre   | 2     | libre | libre    | libre            | libre      | libre  | libre         | 3         | libre           | libre        | libre          |
+    #| 6       | libre           | libre   | 2     | libre | libre    | libre            | libre      | libre  | libre         | 1         | libre           | libre        | libre          |
+    #| 11      | libre           | 2       | 2     | libre | libre    | libre            | libre      | libre  | libre         | libre     | libre           | 1            | 1              |
+     | 13      | libre           | 1       | 1            | libre | libre    | libre            | libre      | libre  | libre         | libre     | libre           | 1            | 1     |
+    #| 24      | libre           |         |                | libre | libre    | libre            | libre      | libre  | libre         | libre     | libre           |              |       |
+    #| 15      | libre           |         |                | libre | libre    | libre            | libre      | libre  | libre         | libre     | libre           |              |       |
+    #| 16      | libre           |         |                | libre | libre    | libre            | libre      | libre  | libre         | libre     | libre           |              |       |
+    #| 17      | libre           |         |                | libre | libre    | libre            | libre      | libre  | libre         | libre     | libre           |              |       |
+    #| 5       | libre           | libre   | libre          | libre | libre    | libre            | bajo       | libre  | libre         | libre     | libre           | tmb          | libre |
 
 
 

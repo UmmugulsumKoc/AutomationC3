@@ -41,21 +41,21 @@ Scenario Outline: Añadir nuevo contrato
 
   Examples:
     | Cliente | Perfil          | Negocio | area  | Zona  | Sociedad | sociedadDivision | riesgo     | region | centro        | actividad | riesgo especial | departamento | Centro Trabajo |
-    #| 21      | Perfil C-Basico | libre   | libre | libre | libre    | libre            | libre      | libre  | libre         | libre     | libre           | libre        | 9              |
-    #| 25      | libre           | 4       | libre | 3     | 2        | 2                | riesgoalto | libre  | libre         | libre     | libre           | libre        | libre          |
+    #| 21      | 2 | libre   | libre | libre | libre    | libre            | libre      | libre  | libre         | libre     | libre           | libre        | 9              |
+    | 25      | libre           | 4       | libre | 3     | 2        | 1                | riesgoalto | libre  | libre         | libre     | libre           | libre        | libre          |
     #| 22      | libre           | 2       | libre | libre | libre    | libre            | libre      | 7      | Fabrica gador | 2         | 4               | libre        | libre          |
     #| 8       | 2               | libre   | 2     | libre | libre    | libre            | libre      | libre  | libre         | libre     | libre           | libre        | 9              |
     #| 26      | libre           | 1       | libre | libre | libre    | libre            | libre      | 1      | bunol         | 1         | 2               | libre        | libre          |
     #| 20      | libre           | libre   | libre | libre | 4        | libre            | libre      | libre  | libre         | 2         | libre           | libre        | 40             |
     #| 1       | libre           | libre   | 2     | libre | libre    | libre            | libre      | libre  | libre         | 3         | libre           | libre        | libre          |
     #| 6       | libre           | libre   | 2     | libre | libre    | libre            | libre      | libre  | libre         | 1         | libre           | libre        | libre          |
-    #| 11      | libre           | 2       | 2     | libre | libre    | libre            | libre      | libre  | libre         | libre     | libre           | 1            | 1              |
-     | 13      | libre           | 1       | 1            | libre | libre    | libre            | libre      | libre  | libre         | libre     | libre           | 1            | 1     |
-    #| 24      | libre           |         |                | libre | libre    | libre            | libre      | libre  | libre         | libre     | libre           |              |       |
-    #| 15      | libre           |         |                | libre | libre    | libre            | libre      | libre  | libre         | libre     | libre           |              |       |
-    #| 16      | libre           |         |                | libre | libre    | libre            | libre      | libre  | libre         | libre     | libre           |              |       |
-    #| 17      | libre           |         |                | libre | libre    | libre            | libre      | libre  | libre         | libre     | libre           |              |       |
-    #| 5       | libre           | libre   | libre          | libre | libre    | libre            | bajo       | libre  | libre         | libre     | libre           | tmb          | libre |
+    # 11      | libre           | 2       | 2     | libre | libre    | libre            | libre      | libre  | libre         | libre     | libre           | 1            | 1              |
+     #| 13      | libre           | 1       | 1            | libre | libre    | libre            | libre      | libre  | libre         | libre     | libre           | 1            | 1     |
+    #| 24      | libre           |  2       |     1           | libre | libre    | libre            | libre      | libre  | libre         | libre     | libre           |   1           |  1     |
+    #| 15      | libre           | 1        |     1           | libre | libre    | libre            | libre      | libre  | libre         | libre     | libre           |              |       |
+    #| 16      | libre           | 1        |  1              | libre | libre    | libre            | libre      | libre  | libre         | libre     | libre           | 1             |  1     |
+     #| 17      | libre           |  1       |   1             | libre | libre    | libre            | libre      | libre  | libre         | libre     | libre           |  1            |  1     |
+     #| 5       | libre           | libre   | libre          | libre | libre    | libre            | 1      | libre  | libre         | libre     | libre           | 2          | libre |
 
 
 

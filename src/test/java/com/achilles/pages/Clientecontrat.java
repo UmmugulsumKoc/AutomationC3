@@ -287,16 +287,19 @@ public class Clientecontrat {
 
 
     public void selectperfil(String CTR){
-        WebElement element;
-        if (ClientId.equalsIgnoreCase("20")){
-            element=sociedadberge;
-
-        }else {
-            element=Actividad;
-        }
-        Select select= new Select(element);
+        Select select= new Select(perfil);
         select.selectByIndex(Integer.parseInt(CTR));
     }
+        //WebElement element;
+        //if (ClientId.equalsIgnoreCase("20")||ClientId.equalsIgnoreCase("16")){
+            //element=sociedadberge;
+
+        //}else {
+        //    element=Actividad;
+        //}
+       // Select select= new Select(element);
+       // select.selectByIndex(Integer.parseInt(CTR));
+   // }
 
 
     public void selectActividadI(String CTR){
@@ -314,6 +317,17 @@ public class Clientecontrat {
 
 
     public void selectsociedadDivision(String CTR) {
+        //WebElement element;
+        //if (ClientId.equalsIgnoreCase("16")){
+        //    element=sociedadDivision;
+
+        //}else {
+         //   element=Actividad;
+        //}
+        //Select select= new Select(element);
+       // select.selectByIndex(Integer.parseInt(CTR));
+    //}
+
         Select select = new Select(sociedadDivision);
         select.selectByIndex(Integer.parseInt(CTR));
 
@@ -322,7 +336,7 @@ public class Clientecontrat {
     public void selectsociedadberge(String CTR) {
 
         WebElement element;
-        if (ClientId.equalsIgnoreCase("20")){
+        if (ClientId.equalsIgnoreCase("20")||ClientId.equalsIgnoreCase("16")){
             element=Sociedad;
 
         }else {
@@ -344,7 +358,7 @@ public class Clientecontrat {
 
     public void selectDepartamento(String CTR) {
             WebElement element;
-            if (ClientId.equalsIgnoreCase("11")||ClientId.equalsIgnoreCase("13")){
+            if (ClientId.equalsIgnoreCase("11")||ClientId.equalsIgnoreCase("13")||ClientId.equalsIgnoreCase("5")||ClientId.equalsIgnoreCase("17")||ClientId.equalsIgnoreCase("16")){
                 element=Departamento;
 
             }else {
@@ -380,7 +394,14 @@ public class Clientecontrat {
     }
 
     public void selectregion(String CTR){
-        Select select= new Select(region);
+            WebElement element;
+            if (ClientId.equalsIgnoreCase("5")||ClientId.equalsIgnoreCase("16")){
+                element=region;
+
+            }else {
+                element=Actividad;
+            }
+            Select select= new Select(element);
         select.selectByIndex(Integer.parseInt(CTR));
 
     }
@@ -388,7 +409,7 @@ public class Clientecontrat {
 
     public void selectnegocio(String CTR){
         WebElement element;
-        if (ClientId.equalsIgnoreCase("1")||ClientId.equalsIgnoreCase("6")||ClientId.equalsIgnoreCase("11")||ClientId.equalsIgnoreCase("13")){
+        if (ClientId.equalsIgnoreCase("1")||ClientId.equalsIgnoreCase("6")||ClientId.equalsIgnoreCase("11")||ClientId.equalsIgnoreCase("13")||ClientId.equalsIgnoreCase("5")||ClientId.equalsIgnoreCase("17")||ClientId.equalsIgnoreCase("16")||ClientId.equalsIgnoreCase("24")||ClientId.equalsIgnoreCase("25")){
             element=negocio;
 
         }else {

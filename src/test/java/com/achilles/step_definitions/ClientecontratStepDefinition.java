@@ -243,12 +243,13 @@ public class ClientecontratStepDefinition {
 
     }
 
-    @When("hago clic en la región y selecciona una")
-    public void hago_clic_en_la_región_y_selecciona_una() throws InterruptedException {
+    @When("hago clic en la región y selecciona una{string}")
+    public void hago_clic_en_la_región_y_selecciona_una(String string) throws InterruptedException {
 
-        client.negocioptionC.click();
-        client.region.click();
-        client.levante.click();
+        //client.negocioptionC.click();
+        //client.region.click();
+        //client.levante.click();
+        client.selectregion(string);
         Thread.sleep(2000);
 
     }
@@ -338,18 +339,24 @@ public class ClientecontratStepDefinition {
     @And("hago clic a negocio y selecciona una {string}")
     public void hago_clic_a_negocio_y_selecciona_una(String string) throws InterruptedException {
         if (!string.equalsIgnoreCase("libre")) {
+            if (client.ClientId.equalsIgnoreCase("24")||client.ClientId.equalsIgnoreCase("25")){
+                client.selectnegocio(string);
+            }else {
+                client.selectDepartamento(string);
+               Thread.sleep(2000);
 
-           client.selectnegocio(string);
-
-           //client.selectnegocioCimsa(string);
-
-
-           //client.negociacimssaoption.click();
-            Thread.sleep(2000);
-
+            }
         }
-
     }
+
+       //    client.selectnegocio(string);
+
+
+         //   Thread.sleep(2000);
+
+       // }
+
+   // }
 
     @And("hago clic en la zona y selecciona una {string}")
     public void hago_clic_en_la_zona_y_selecciona_una(String string) throws InterruptedException {
@@ -378,7 +385,7 @@ public class ClientecontratStepDefinition {
     public void hago_clic_sociedadDivision_y_seleciona_una(String string) {
 
         if (!string.equalsIgnoreCase("libre")) {
-            //client.sociedadDivision.click();
+            client.sociedadDivision.click();
             //client.sociedadDivisionoption.click();
             client.selectsociedadDivision(string);
         }
@@ -387,8 +394,8 @@ public class ClientecontratStepDefinition {
     @And("hago clic a riesgo y selecciona una {string}")
     public void hago_clic_a_riesgo_y_selecciona_una(String string) {
         if (!string.equalsIgnoreCase("libre")) {
-            client.riesgo.click();
-            client.riesgoption.click();
+            client.selectnegocio(string);
+
         }
     }
 
@@ -435,11 +442,21 @@ public class ClientecontratStepDefinition {
     public void hago_clic_a_departamento_y_selecciona_una(String string) throws InterruptedException {
         if (!string.equalsIgnoreCase("libre")) {
 
-            Thread.sleep(2000);
-            client.selectsociedadberge(string);
+            if (client.ClientId.equalsIgnoreCase("5")||client.ClientId.equalsIgnoreCase("16")||client.ClientId.equalsIgnoreCase("11")){
+                client.selectregion(string);
+            }else {
+                client.selectsociedadberge(string);
 
+                Thread.sleep(2000);
 
+            }
         }
+
+
+
+
+
+
 
     }
 

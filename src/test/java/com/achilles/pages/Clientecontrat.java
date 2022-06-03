@@ -279,6 +279,10 @@ public class Clientecontrat {
     @FindBy(id ="OP-5")
     public WebElement TMB;
 
+    @FindBy(id ="OP-18")
+    public WebElement Atlanticcopper;
+
+
 
     public void selectSeleccionePerson(String CTR){
         Select select= new Select(SeleccionePerson);

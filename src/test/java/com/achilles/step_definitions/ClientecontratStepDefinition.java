@@ -472,6 +472,88 @@ public class ClientecontratStepDefinition {
 
     }
 
+
+
+    @Given("acceda a Atlanticcopper")
+    public void acceda_a_Atlanticcopper() throws InterruptedException {
+
+        client.Selectcliente.click();
+        client.Atlanticcopper.click();
+        Thread.sleep(2000);
+
+    }
+
+    @Given("hace click en la Contratos en la barra derecha")
+    public void hace_click_en_la_Contratos_en_la_barra_derecha() {
+
+    }
+
+    @Given("enta a Gestion de contartos")
+    public void enta_a_Gestion_de_contartos() {
+
+    }
+
+    @Given("acceda a boton para Añadir")
+    public void acceda_a_boton_para_Añadir() {
+
+    }
+
+    @Given("rellena numero de contrato")
+    public void rellena_numero_de_contrato() {
+
+    }
+
+    @Given("rellena Descripcion")
+    public void rellena_Descripcion() {
+
+    }
+
+    @Given("selecciona contratista")
+    public void selecciona_contratista() {
+
+    }
+
+    @Given("selecciona la actividad")
+    public void selecciona_la_actividad() {
+
+    }
+
+    @Given("selecciona departamento")
+    public void selecciona_departamento() {
+
+    }
+
+    @Given("Añadir Responsable")
+    public void añadir_Responsable() {
+
+
+    }
+
+    @Given("pinchar en estado y elegi uno")
+    public void pinchar_en_estado_y_elegi_uno() {
+
+    }
+
+    @Given("entra nueva persona contacto")
+    public void entra_nueva_persona_contacto() {
+
+    }
+
+    @Given("abre la tabla y elegi uno")
+    public void abre_la_tabla_y_elegi_uno() {
+
+    }
+
+    @Given("guarda el contrato")
+    public void guarda_el_contrato() {
+
+    }
+
+    @Then("validarlo")
+    public void validarlo() {
+
+    }
+
 }
 
 

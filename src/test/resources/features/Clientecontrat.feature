@@ -7,6 +7,26 @@ Feature: Login
     Then usuario deberia ver la pagina
     Then entro en la pagina Controlar
 
+
+
+ @ContratoAtlantik
+   Scenario: Añadir contrato para Atlantik
+   Given acceda a Atlanticcopper
+   And hace click en la Contratos en la barra derecha
+   And enta a Gestion de contartos
+   And acceda a boton para Añadir
+   And rellena numero de contrato
+   And rellena Descripcion
+   And selecciona contratista
+   And selecciona la actividad
+   And selecciona departamento
+   And Añadir Responsable
+   And pinchar en estado y elegi uno
+   And entra nueva persona contacto
+   And abre la tabla y elegi uno
+   And guarda el contrato
+   Then validarlo
+
 @Añadircontrato
 Scenario Outline: Añadir nuevo contrato
   Given entra a cliente "<Cliente>"

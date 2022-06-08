@@ -7,9 +7,9 @@ import org.openqa.selenium.support.PageFactory;
 
 public class Filtrar {
 
-    public Filtrar(){
-        PageFactory.initElements(Driver.get(), this);
-    }
+    public Filtrar(){PageFactory.initElements(Driver.get(), this);}
+
+
 
     @FindBy(xpath = "//label[@for=\"validation\"]" )
     public WebElement validar;

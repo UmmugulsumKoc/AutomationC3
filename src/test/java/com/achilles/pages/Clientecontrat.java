@@ -245,8 +245,7 @@ public class Clientecontrat {
 
 
 
-    @FindBy(id ="OP-1")
-    public WebElement Indra;
+
 
     @FindBy(id = "structure4")
     public WebElement ActividadI;

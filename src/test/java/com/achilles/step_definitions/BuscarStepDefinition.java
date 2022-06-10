@@ -74,10 +74,11 @@ public class BuscarStepDefinition {
     public void ir_a_Que_esta_buscando_y_cambia_a_Contrato() throws InterruptedException {
         buscar.Queestasbuscando.click();
         buscar.contrato.click();
-        Thread.sleep(2000);
+        //Thread.sleep(2000);
         buscar.bscrbtn.click();
-
+        Thread.sleep(2000);
         buscar.cambiarfiltro.click();
+        Thread.sleep(2000);
 
 
     }
@@ -88,8 +89,8 @@ public class BuscarStepDefinition {
         buscar.trabajador.click();
         Thread.sleep(2000);
         buscar.bscrbtn.click();
-
         buscar.cambiarfiltro.click();
+        Thread.sleep(2000);
 
     }
 
@@ -99,8 +100,8 @@ public class BuscarStepDefinition {
         buscar.vehiculo.click();
         Thread.sleep(2000);
         buscar.bscrbtn.click();
-
         buscar.cambiarfiltro.click();
+        Thread.sleep(2000);
 
     }
 
@@ -108,9 +109,10 @@ public class BuscarStepDefinition {
     public void ir_a_Que_esta_buscando_y_cambia_a_Maquinaria() throws InterruptedException {
         buscar.Queestasbuscando.click();
         buscar.maquinaria.click();
-        buscar.bscrbtn.click();
         Thread.sleep(2000);
-        buscar.cambiarfiltro.click();
+        buscar.bscrbtn.click();
+
+
 
     }
 

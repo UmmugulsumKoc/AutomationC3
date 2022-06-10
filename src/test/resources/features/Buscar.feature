@@ -7,7 +7,7 @@ Feature: Login
     Then usuario deberia ver la pagina
     Then entro en la pagina Controlar
 
-
+@Buscar
   Scenario Outline: Buscar
 
     Given entre en una cliente "<Cliente>"

@@ -11,7 +11,7 @@ public class Filtrar {
 
 
 
-    @FindBy(xpath = "//label[@for=\"validation\"]" )
+    @FindBy(xpath ="//label[@for=\"validation\"]")
     public WebElement validar;
 
     @FindBy(xpath = "//a[@href=\"/Search/Documents/ValidateDocuments\"]")

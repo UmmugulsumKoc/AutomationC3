@@ -9,7 +9,8 @@ Feature: Validacion documentos
 
 @Mostrarfiltro
 
-Scenario:
+Scenario:Validar
+
   Given hago clic en Validación
   When elegi Validar documentos
   And hago clic en Mostrar filtros

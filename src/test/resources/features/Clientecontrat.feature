@@ -61,8 +61,8 @@ Scenario Outline: Añadir nuevo contrato
 
   Examples:
     | Cliente | Perfil          | Negocio | area  | Zona  | Sociedad | sociedadDivision | riesgo     | region | centro        | actividad | riesgo especial | departamento | Centro Trabajo |
-    #| 21      | 2 | libre   | libre | libre | libre    | libre            | libre      | libre  | libre         | libre     | libre           | libre        | 9              |
-    | 25      | libre           | 4       | libre | 3     | 2        | 1                | riesgoalto | libre  | libre         | libre     | libre           | libre        | libre          |
+    | 21      | 2 | libre   | libre | libre | libre    | libre            | libre      | libre  | libre         | libre     | libre           | libre        | 9              |
+    #| 25      | libre           | 4       | libre | 3     | 2        | 1                | riesgoalto | libre  | libre         | libre     | libre           | libre        | libre          |
     #| 22      | libre           | 2       | libre | libre | libre    | libre            | libre      | 7      | Fabrica gador | 2         | 4               | libre        | libre          |
     #| 8       | 2               | libre   | 2     | libre | libre    | libre            | libre      | libre  | libre         | libre     | libre           | libre        | 9              |
     #| 26      | libre           | 1       | libre | libre | libre    | libre            | libre      | 1      | bunol         | 1         | 2               | libre        | libre          |
